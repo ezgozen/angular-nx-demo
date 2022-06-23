@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "get-a-trip": "apps/get-a-trip",
+    "get-a-trip-e2e": "apps/get-a-trip-e2e"
+  }
+}
