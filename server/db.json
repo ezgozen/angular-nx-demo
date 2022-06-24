@@ -1,0 +1,31 @@
+{
+    "trips": [
+        {
+            "id": "1",
+            "title": "Maldives",
+            "date": "12/01/2023",
+            "cityTo": "Maldives",
+            "cityFrom": "Istanbul",
+            "img": "https://q-xx.bstatic.com/xdata/images/hotel/max500/267371187.jpg?k=c3fd5a1ebaa0087a98fbc1292cace7335875c031a1bc356e67fc53c62e5dff30&o=",
+            "premium": false
+        },
+        {
+            "id": "2",
+            "title": "Paris",
+            "date": "12/01/2023",
+            "cityTo": "Paris",
+            "cityFrom": "Izmır",
+            "img": "https://blog.obilet.com/wp-content/uploads/2018/03/Paris.jpg",
+            "premium": true
+        },
+        {
+            "id": "3",
+            "title": "Barcelona",
+            "date": "12/01/2023",
+            "cityTo": "Barcelona",
+            "cityFrom": "Ankara",
+            "img": "https://gfx.podroze.radiozet.pl/var/radiozet/storage/images/podroze/barcelona-atrakcje-i-zabytki.-top-10-miejsc-ktore-warto-zobaczyc/477605-1-pol-PL/Barcelona-10-rzeczy-ktore-musisz-zrobic-w-tym-miescie_article.jpg",
+            "premium": false
+        }
+    ]
+}

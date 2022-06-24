@@ -1,0 +1,18 @@
+
+<div class="banners">
+    <mat-card *ngFor="let trip of trips"
+              class="mat-list-option"
+                    (click)="selected.emit(trip)">
+      <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{trip.title}}</mat-card-title>
+          <mat-card-subtitle>{{trip.date}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="trip.img" [alt]="trip.title">
+        <mat-card-content>
+          <p>
+            {{trip.cityFrom}} {{trip.cityTo}} 
+          </p>
+        </mat-card-content>
+    </mat-card>
+</div>

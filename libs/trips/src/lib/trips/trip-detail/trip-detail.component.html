@@ -1,0 +1,7 @@
+<div class="component-container">
+    <div class="detail-component" *ngIf="trip$ | async as trip">
+        <h1>{{(trip$ | async)?.title}} <small>({{(trip$ | async)?.cityFrom}} - {{(trip$ | async)?.cityTo}} )</small></h1>
+        <p>{{(trip$ | async)?.date}}</p>
+        <img [src]="(trip$ | async)?.img" />
+    </div>
+</div>

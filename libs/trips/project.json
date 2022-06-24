@@ -1,0 +1,22 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/trips/src",
+  "prefix": "demo-project",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/trips"],
+      "options": {
+        "jestConfig": "libs/trips/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/trips/**/*.ts", "libs/trips/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

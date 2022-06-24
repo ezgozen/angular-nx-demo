@@ -1,0 +1,9 @@
+<div class="component-container">
+    <div class="list-component">
+      <demo-project-trip-list
+        [trips]="trips$ | async"
+        (selected)="selectTrip($event)"
+      >
+      </demo-project-trip-list>
+    </div>
+</div>
