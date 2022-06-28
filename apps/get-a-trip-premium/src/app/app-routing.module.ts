@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { TripsModule } from '@demo-project/trips';
+import { CoreModule } from '@demo-project/core';
 
 const routes: Routes = [
   {
@@ -19,7 +19,7 @@ const routes: Routes = [
   declarations: [],
   imports: [
     CommonModule,
-    TripsModule,
+    CoreModule,
     RouterModule.forRoot(routes)
   ],
   exports: [RouterModule],

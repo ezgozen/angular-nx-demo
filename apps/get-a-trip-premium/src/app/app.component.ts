@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'demo-project-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: [],
 })
 export class AppComponent {
 

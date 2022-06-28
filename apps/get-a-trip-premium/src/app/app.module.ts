@@ -4,22 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from '@demo-project/material';
-import { UiHeaderModule } from '@demo-project/ui-header';
 import { HomeComponent } from './home/home.component';
-import { TripsModule } from '@demo-project/trips';
+import { CoreModule } from '@demo-project/core';
+import { MaterialModule } from 'libs/core/src/lib/material/material.module';
 
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    UiHeaderModule,
-    AppRoutingModule,
-    TripsModule
+    CoreModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent],

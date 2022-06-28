@@ -2,13 +2,8 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "data-models": "libs/data-models",
+    "core": "libs/core",
     "get-a-trip": "apps/get-a-trip",
-    "get-a-trip-e2e": "apps/get-a-trip-e2e",
-    "get-a-trip-premium": "apps/get-a-trip-premium",
-    "get-a-trip-premium-e2e": "apps/get-a-trip-premium-e2e",
-    "material": "libs/material",
-    "trips": "libs/trips",
-    "ui-header": "libs/ui-header"
+    "get-a-trip-premium": "apps/get-a-trip-premium"
   }
 }
