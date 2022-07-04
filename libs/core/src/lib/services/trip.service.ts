@@ -1,32 +1,43 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Trip } from '@demo-project/core';
-
-const ENDPOINT = 'http://localhost:3000/trips';
+import { EnvironmentConfig, ENV_CONFIG } from '../utils/environment-config.interface';
+import { DataService } from './data.service';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TripService {
-  constructor(private httpClient: HttpClient) { }
+  public isPremium: boolean;
+  private serviceEndpoint = 'trips';
 
-  all() {
-    return this.httpClient.get<Trip[]>(ENDPOINT);
+  constructor(
+    private dataService: DataService,
+    @Inject(ENV_CONFIG) private config: EnvironmentConfig
+    ) {
+      this.isPremium = config.environment.isPremium;
+     }
+
+  all(): Observable<Trip[]> {
+    return this.dataService.all<Trip[]>(this.serviceEndpoint)
+      .pipe(
+        map(tags => tags.filter((trip: Trip) => trip.premium === this.config.environment.isPremium)));
   }
 
-  find(id: string) {
-    return this.httpClient.get<Trip>(ENDPOINT + `/${id}`);
+  find(id: string): Observable<Trip> {
+    return this.dataService.find<Trip>(this.serviceEndpoint, id);
   }
   
   create(trip: Trip) {
-    return this.httpClient.post(ENDPOINT, trip);
+    return this.dataService.create(this.serviceEndpoint, trip);
   }
   
   update(trip: Trip) {
-    return this.httpClient.put(ENDPOINT + `/${trip.id}`, trip);
+    return this.dataService.update(this.serviceEndpoint, trip, trip.id);
   }
   
-  delete(trip: Trip) {
-    return this.httpClient.delete(ENDPOINT + `/${trip.id}`);
+  delete(id: string): Observable<void> {
+    return this.dataService.delete<void>(this.serviceEndpoint, id);
   }
 }

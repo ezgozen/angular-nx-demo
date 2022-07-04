@@ -16,10 +16,8 @@ export class TripsComponent implements OnInit {
   constructor(private tripService: TripService, private router: Router) {}
 
   ngOnInit(): void {
-    this.trips$ = this.tripService.all()
-                  .pipe(
-                    // take(1),
-                    map(tags => tags.filter(tag => tag.premium === this.isPremium)));
+    this.trips$ = this.tripService.all();
+                  // .pipe(map(tags => tags.filter(tag => tag.premium === this.isPremium)));
   }
 
   selectTrip(trip: Trip): void {
