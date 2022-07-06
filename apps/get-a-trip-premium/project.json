@@ -18,7 +18,6 @@
           "apps/get-a-trip-premium/src/assets"
         ],
         "styles": [
-          "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
           "apps/get-a-trip-premium/src/styles.scss"
         ],
         "scripts": []

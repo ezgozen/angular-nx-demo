@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Trip } from '@demo-project/core';
+import { getSelectedTrips, Trip, TripsPartialState } from '@demo-project/core';
+import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { TripService } from '../../services/trip.service';
 
@@ -11,10 +12,18 @@ import { TripService } from '../../services/trip.service';
 })
 export class TripDetailComponent implements OnInit {
   trip$: Observable<Trip>;
-  constructor(private route: ActivatedRoute, private tripService: TripService) {}
+  previouslyVisited$!: Observable<Trip[]>;
+
+  constructor(
+    private route: ActivatedRoute,
+    private tripService: TripService,
+    private store: Store<TripsPartialState>) {}
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.trip$ = this.tripService.find(id);
+
+
+    this.previouslyVisited$ = this.store.pipe(select(getSelectedTrips));
   }
 }

@@ -20,7 +20,6 @@
           "apps/get-a-trip/src/assets"
         ],
         "styles": [
-          "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
           "apps/get-a-trip/src/styles.scss"
         ],
         "scripts": []

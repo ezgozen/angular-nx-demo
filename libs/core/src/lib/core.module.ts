@@ -7,13 +7,21 @@ import { TripDetailComponent } from './trips/trip-detail/trip-detail.component';
 import { TripsComponent } from './trips/trips.component';
 import { TripListComponent } from './trips/trip-list/trip-list.component';
 import { MaterialModule } from './material/material.module';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import * as fromTrips from './+state/trips.reducer';
+import { TripsEffects } from './+state/trips.effects';
 
 @NgModule({
   imports: [
     CommonModule,
     MaterialModule,
-    HttpClientModule, 
-    RouterModule.forChild([{ path: 'detail/:id', component: TripDetailComponent }])
+    HttpClientModule,
+    RouterModule.forChild([
+      { path: 'detail/:id', component: TripDetailComponent },
+    ]),
+    StoreModule.forFeature(fromTrips.TRIPS_FEATURE_KEY, fromTrips.reducer),
+    EffectsModule.forFeature([TripsEffects]),
   ],
   declarations: [
     TripsComponent,
@@ -25,7 +33,7 @@ import { MaterialModule } from './material/material.module';
     HeaderComponent,
     TripsComponent,
     TripListComponent,
-    TripDetailComponent
-  ]
+    TripDetailComponent,
+  ],
 })
 export class CoreModule {}

@@ -7,3 +7,14 @@
       </demo-project-trip-list>
     </div>
 </div>
+<div class="component-container">
+    <div class="banners visited">
+      <mat-card *ngFor="let trip of previouslyVisited$ | async" class="mat-list-option" (click)="console.log(trip)">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{trip.title}}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image [src]="trip.img" [alt]="trip.title">
+      </mat-card>
+  </div>
+</div>
