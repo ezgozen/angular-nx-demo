@@ -1,4 +1,11 @@
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+// @import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import '~@angular/material/theming';
+@include mat-core();
+$my-app-primary: mat-palette($mat-blue-grey);
+$my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn:    mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 
 html,
@@ -89,7 +96,7 @@ mat-card {
 
 .container {
   flex: 1 1 100%;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .home-container {
@@ -236,6 +243,14 @@ mat-toolbar {
       line-height: 25px;
       margin: 5px 25px;
       text-align: center;
+    }
+  }
+}
+.visited {
+  mat-card {
+    width: 250px;
+    img {
+      height: 135px;
     }
   }
 }
