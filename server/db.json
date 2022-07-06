@@ -26,6 +26,132 @@
             "cityFrom": "Ankara",
             "img": "https://gfx.podroze.radiozet.pl/var/radiozet/storage/images/podroze/barcelona-atrakcje-i-zabytki.-top-10-miejsc-ktore-warto-zobaczyc/477605-1-pol-PL/Barcelona-10-rzeczy-ktore-musisz-zrobic-w-tym-miescie_article.jpg",
             "premium": false
+        },
+        {
+            "id": "4",
+            "title": "Italy",
+            "date": "12/01/2023",
+            "cityTo": "Rome",
+            "cityFrom": "Izmır",
+            "img": "https://italyadaegitim.com/wp-content/uploads/2021/03/Italyada-en-cok-tercih-edilen-bolumler-780x470.jpg",
+            "premium": true
+        },
+        {
+            "id": "5",
+            "title": "Japan",
+            "date": "12/01/2023",
+            "cityTo": "Tokio",
+            "cityFrom": "Izmır",
+            "img": "https://im.haberturk.com/2022/05/18/ver1652853243/3442105_810x458.jpg",
+            "premium": false
+        },
+        {
+            "id": "6",
+            "title": "Dubai",
+            "date": "12/01/2023",
+            "cityTo": "Dubai",
+            "cityFrom": "Izmır",
+            "img": "https://iasbh.tmgrup.com.tr/8e7ed0/1200/627/0/0/724/378?u=https://isbh.tmgrup.com.tr/sbh/2022/06/14/dubai-nerede-dubai-nereye-bagli-hangi-ulkenin-baskenti-ve-nasil-gidilir-k1-1655217059004.jpg",
+            "premium": true
+        },
+        {
+            "id": "7",
+            "title": "Greece",
+            "date": "12/01/2023",
+            "cityTo": "Atina",
+            "cityFrom": "Izmır",
+            "img": "https://www.remax.eu/uploads/agent-1/Greece%20(Optimized)-5e580fa45d9f1.jpg",
+            "premium": true
+        },
+        {
+            "id": "8",
+            "title": "Germany",
+            "date": "12/01/2023",
+            "cityTo": "Berlin",
+            "cityFrom": "Izmır",
+            "img": "https://www.citywealthmag.com/sites/default/files/styles/1000w/public/news-images/Frankfurt%20skyline.jpg?itok=q_zdQye2",
+            "premium": false
+        },
+        {
+            "id": "9",
+            "title": "Luxembourg",
+            "date": "12/01/2023",
+            "cityTo": "Luxembourg City",
+            "cityFrom": "Izmır",
+            "img": "https://i2.milimaj.com/i/milliyet/75/750x0/611a720d86b244252c9d327d.jpg",
+            "premium": false
+        },
+        {
+            "id": "10",
+            "title": "Venice",
+            "date": "12/01/2023",
+            "cityTo": "Venice",
+            "cityFrom": "Izmır",
+            "img": "https://cdnp.flypgs.com/files/Sehirler-long-tail/Venedik/venice-gondol.jpg",
+            "premium": true
+        },
+        {
+            "id": "11",
+            "title": "Bulgaria",
+            "date": "12/01/2023",
+            "cityTo": "Sofia",
+            "cityFrom": "Izmır",
+            "img": "https://cdn.miniyol.com//img/blogs/2022/05/bulgaristan-rota-1652169627.png",
+            "premium": true
+        },
+        {
+            "id": "12",
+            "title": "Thailand",
+            "date": "12/01/2023",
+            "cityTo": "Bangkok",
+            "cityFrom": "Izmır",
+            "img": "https://cdn.cnn.com/cnnnext/dam/assets/170706113449-thailand.jpg",
+            "premium": false
+        },
+        {
+            "id": "13",
+            "title": "Singapore",
+            "date": "12/01/2023",
+            "cityTo": "Singapore",
+            "cityFrom": "Izmır",
+            "img": "https://img.emg-services.net/HtmlPages/HtmlPage14845/untitled-design-10.jpg",
+            "premium": true
+        },
+        {
+            "id": "14",
+            "title": "Los Angeles",
+            "date": "12/01/2023",
+            "cityTo": "Los Angeles",
+            "cityFrom": "Izmır",
+            "img": "https://cdn.forbes.com.mx/2021/07/Los-Angeles-California-e1625686384887-640x360.jpg",
+            "premium": true
+        },
+        {
+            "id": "15",
+            "title": "Russia",
+            "date": "12/01/2023",
+            "cityTo": "Moskow",
+            "cityFrom": "Izmır",
+            "img": "https://vegatercume.com/wp-content/uploads/2021/07/rusca-tercume.jpg",
+            "premium": true
+        },
+        {
+            "id": "16",
+            "title": "St. Petersburg",
+            "date": "12/01/2023",
+            "cityTo": "St. Petersburg",
+            "cityFrom": "Izmır",
+            "img": "https://cdnp.flypgs.com/files/Sehirler-long-tail/St_Petersburg/st-petersburg-gezi-rehberi.jpg",
+            "premium": false
+        },
+        {
+            "id": "17",
+            "title": "Poland",
+            "date": "12/01/2023",
+            "cityTo": "Warsaw",
+            "cityFrom": "Izmır",
+            "img": "https://i.ytimg.com/vi/Xu4rytls_YY/maxresdefault.jpg",
+            "premium": false
         }
     ]
 }
