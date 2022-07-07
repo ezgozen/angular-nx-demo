@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { getSelectedTrips, Trip, TripsPartialState } from '@demo-project/core';
 import { select, Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { TripService } from '../../services/trip.service';
 
 @Component({
@@ -24,6 +24,7 @@ export class TripDetailComponent implements OnInit {
     this.trip$ = this.tripService.find(id);
 
 
-    this.previouslyVisited$ = this.store.pipe(select(getSelectedTrips));
+    this.previouslyVisited$ = this.store.pipe(select(getSelectedTrips),
+      map(trips => trips && trips.length > 0 ? (trips.length > 4 ? trips.slice(-4) : trips) : []));
   }
 }

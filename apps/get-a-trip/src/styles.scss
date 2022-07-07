@@ -247,3 +247,14 @@ mat-toolbar {
     }
   }
 }
+.heading-visited {
+  text-align: -webkit-center;
+  background: #e9e9ba;
+  padding: 20px 0;
+  h2 {
+    color: #0035ff;
+    text-decoration-line: underline;
+    padding-bottom: 5px;
+    font-weight: 500;
+  }
+}

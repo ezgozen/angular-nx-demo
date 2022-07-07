@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Trip } from '@demo-project/core';
 import { Router } from '@angular/router';
 import { getAllTrips, getSelectedTrips } from '../+state/trips.selectors';
 import { select, Store } from '@ngrx/store';
 import { TripsPartialState } from '../+state/trips.reducer';
-import { loadTrips, selectTrips, SelectTripById } from '../+state/trips.actions';
+import { loadTrips, selectTrips } from '../+state/trips.actions';
 
 @Component({
   selector: 'demo-project-trips',
@@ -26,7 +26,8 @@ export class TripsComponent implements OnInit {
    // this.store.dispatch(SelectTripById({tripId:'1'}));
 
     this.trips$ = this.store.pipe(select(getAllTrips));
-    this.previouslyVisited$ = this.store.pipe(select(getSelectedTrips));
+    this.previouslyVisited$ = this.store.pipe(select(getSelectedTrips),
+      map(trips => trips && trips.length > 0 ? (trips.length > 4 ? trips.slice(-4) : trips) : []));
   }
 
   selectTrip(trip: Trip): void {
