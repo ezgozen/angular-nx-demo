@@ -1,23 +1,22 @@
 <div class="component-container">
-    <div class="list-component">
-      <demo-project-trip-list
-        [trips]="trips$ | async"
-        (selected)="selectTrip($event)"
-      >
-      </demo-project-trip-list>
-    </div>
+  <div class="list-component">
+    <demo-project-trip-list [trips]="trips$ | async" (selected)="selectTrip($event)">
+    </demo-project-trip-list>
+  </div>
 </div>
 <div class="heading-visited" *ngIf="previouslyVisited$ && (previouslyVisited$ | async).length > 0">
   <h2>Previously Visited Trips</h2>
   <div class="component-container">
-      <div class="banners visited">
-        <mat-card *ngFor="let trip of previouslyVisited$ | async" class="mat-list-option">
+    <div class="banners visited">
+      <ng-container *ngIf="previouslyVisited2$ | async as previouslyVisited2">
+        <mat-card *ngFor="let trip of previouslyVisited2" class="mat-list-option">
           <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>{{trip.title}}</mat-card-title>
-            </mat-card-header>
-            <img mat-card-image [src]="trip.img" [alt]="trip.title">
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{trip.title}}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image [src]="trip.img" [alt]="trip.title">
         </mat-card>
+      </ng-container>
     </div>
   </div>
 </div>

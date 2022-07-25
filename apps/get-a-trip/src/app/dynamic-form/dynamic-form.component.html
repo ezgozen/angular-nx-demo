@@ -1,0 +1,58 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div *ngFor="let control of jsonFormData?.controls">
+        <mat-form-field *ngIf="
+            ['text','password','email','number','search','tel','url'].includes(control.type)">
+            <mat-label *ngIf="control.label !== ''">{{ control.label }}</mat-label>
+            <input matInput [type]="control.type" [formControlName]="control.name" [value]="control.value" />
+
+            
+
+        </mat-form-field>
+    </div>
+    <button class="btn btn-primary" [disabled]="myForm.invalid" type="submit">Submit</button>
+
+</form>
+<!-- <textarea matInput
+                *ngIf="control.type === 'textarea'"
+                [formControlName]="control.name"
+                [value]="control.value"
+            ></textarea>
+            <mat-checkbox
+                *ngIf="control.type === 'checkbox'"
+                [formControlName]="control.name"
+                [checked]="control.value"
+            ></mat-checkbox> -->
+<!-- <form [formGroup]="form" (ngSubmit)="submit()">
+         
+    <div class="form-group">
+        <mat-form-field appearance="fill">
+            <mat-label>Username</mat-label>
+            <input matInput formControlName="username" id="username" type="text" class="form-control">
+
+            <mat-error *ngIf="f['username'].errors && f['username'].errors['required']">Bu alan zorunludur.</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" id="password" type="text" class="form-control">
+
+            <mat-error *ngIf="f['password'].errors && f['password'].errors['required']">Bu alan zorunludur.</mat-error>
+            <mat-error *ngIf="f['password'].errors && f['password'].errors['minlength']">Minimum 6 karakter girmelisiniz</mat-error>
+            <mat-error *ngIf="f['password'].errors && f['password'].errors['maxlength']">Maksimum 15 karakter girmelisiniz.</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender" id="gender" type="text" class="form-control">
+              <mat-option value="1">Male</mat-option>
+              <mat-option value="2">Female</mat-option>
+            </mat-select>
+
+            <mat-error *ngIf="f['gender'].errors && f['gender'].errors['required']">Bu alan zorunludur.</mat-error>
+          </mat-form-field>
+    </div>
+
+    
+     
+    <button class="btn btn-primary" [disabled]="form.invalid" type="submit">Submit</button>
+</form> -->

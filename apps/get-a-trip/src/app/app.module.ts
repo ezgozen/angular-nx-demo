@@ -12,14 +12,18 @@ import { environment } from '../environments/environment';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, DynamicFormComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     CoreModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     AppRoutingModule,
     EnvironmentModule.forRoot({ environment }),
     StoreModule.forRoot(

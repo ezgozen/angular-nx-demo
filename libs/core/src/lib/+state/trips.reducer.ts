@@ -9,6 +9,7 @@ export const TRIPS_FEATURE_KEY = 'trips';
 export interface TripsData extends EntityState<Trip> {
   previouslyVisited: Trip[];
   selectedId?: string | number; // which Trips record has been selected
+  selectedTrip?: Trip;
   loaded: boolean; // has the Trips list been loaded
   error?: string | null; // last known error (if any)
 }
@@ -21,6 +22,7 @@ export const initialState: TripsData = tripsAdapter.getInitialState({
   previouslyVisited: [],
   error: '',
   selectedId: null,
+  selectedTrip: null,
   loaded: false,
 });
 
@@ -47,11 +49,7 @@ const tripsReducer = createReducer(
     }
    }),
 
-   on(TripsActions.SelectTripById, (state) => ({ ...state, loaded: false, error: null })),
-   on(TripsActions.SelectTripByIdSuccess, (state, { trip }) => ({ ...state, loaded: true, trip })),
-   on(TripsActions.SelectTripByIdFailure, (state, { error }) => 
-     tripsAdapter.removeAll({ ...state, error })),
- 
+   on(TripsActions.SelectedTripOnClick, (state, { trip }) => ({ ...state, loaded: false, error: null, selectedTrip: trip })), 
 );
 
 export function reducer(state: TripsData | undefined, action: Action) {

@@ -1,5 +1,4 @@
 import { Inject, Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Trip } from '@demo-project/core';
 import { EnvironmentConfig, ENV_CONFIG } from '../utils/environment-config.interface';
 import { DataService } from './data.service';

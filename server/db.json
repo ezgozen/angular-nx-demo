@@ -1,4 +1,47 @@
 {
+    "controls": [
+        {
+          "name": "username",
+          "label": "Username",
+          "inputType": "text-field",
+          "controlType": "input",
+          "config": {
+              "type": "text"
+          },
+          "defaultValue": "ezgi",
+          "validations": [
+              { "isRequired": true, "message": "bu alan zorunludur."}
+          ]
+        },
+        {
+            "name": "password",
+            "label": "Password",
+            "inputType": "text-field",
+            "config": {
+                "type": "password"
+            },
+            "defaultValue": "",
+            "validations": [
+                { "isRequired": true, "message": "bu alan zorunludur."},
+                { "max": 15, "message": "maksimum 15 karakter girmelisiniz"},
+                { "min": 6, "message": "minimum 6 karakter olmalı"}
+            ]
+        },
+        {
+            "name": "gender",
+            "label": "Gender",
+            "inputType": "select",
+            "config":{},
+            "defaultValue": 2,
+            "validations":[
+                {"isRequired": true, "message": "bu alan zorunludur."}
+            ],
+            "options": [
+                {"key": "Male", "value": 1},
+                {"key": "Female", "value": 2}
+            ]
+        }
+      ],
     "trips": [
         {
             "id": "1",

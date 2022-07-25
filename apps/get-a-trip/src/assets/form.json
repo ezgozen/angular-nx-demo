@@ -1,0 +1,23 @@
+{
+    "controls": [
+      {
+        "name": "username",
+        "label": "Username",
+        "inputType": "text-field",
+        "config": {
+            "type": "text"
+        },
+        "defaultValue": "",
+        "validations": [
+            { "isRequired": true, "message": "bu alan zorunludur."}
+        ]
+      },
+      {
+        "name": "lastName",
+        "label": "Last name:",
+        "defaultValue": "",
+        "inputType": "text",
+        "validations": {}
+      }
+    ]
+  }

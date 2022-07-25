@@ -6,9 +6,7 @@ export enum TripActionTypes {
   LoadTripsSuccess = '[Trips API] Load Trips Success',
   LoadTripsFail = '[Trips API] Load Trips Failure',
   SelectTrips = '[Trip Detail Page] Select Trips',
-  SelectTripById = '[Trip Detail Page] Select Trip By Id',
-  SelectTripByIdSuccess = '[Trip Detail Page API] Select Trip By Id Success',
-  SelectTripByIdFail = '[Trip Detail Page] Select Trip By Id Failure',
+  SelectedTripOnClick = '[Trip Detail Page] Select Trip By Id',
 }
 
 export const loadTrips = createAction(TripActionTypes.LoadTrips);
@@ -24,13 +22,6 @@ export const loadTripsFailure = createAction(
 export const selectTrips = createAction(TripActionTypes.SelectTrips,
   props<{ trip: Trip }>());
 
-export const SelectTripById = createAction(TripActionTypes.SelectTripById,
-  props<{ tripId: string }>());
-export const SelectTripByIdSuccess = createAction(
-  TripActionTypes.SelectTripByIdSuccess,
-  props<{ trip: Trip }>()
-);
-export const SelectTripByIdFailure = createAction(
-  TripActionTypes.SelectTripByIdFail,
-  props<{ error: any }>()
-);
+
+export const SelectedTripOnClick = createAction(TripActionTypes.SelectedTripOnClick,
+  props<{ trip: Trip }>());

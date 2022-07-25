@@ -1,0 +1,10 @@
+<mat-form-field appearance="fill">
+    <mat-label *ngIf="field.label">{{field.label}}</mat-label>
+    <mat-select [formControlName]="field.name" (selectionChange)="onChangeValue($event)">
+        <mat-option *ngFor="let option of field.options" [value]="option.value">
+            {{ option.key }}
+        </mat-option>
+    </mat-select>
+
+    <demo-project-field-errors [errors]="errors"></demo-project-field-errors>
+</mat-form-field>

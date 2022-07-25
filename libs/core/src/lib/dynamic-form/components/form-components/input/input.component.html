@@ -1,0 +1,9 @@
+<mat-form-field appearance="fill">
+    <mat-label *ngIf="field.label">{{ field.label }}</mat-label>
+    <input matInput [type]="field.config?.type" [formControlName]="field.name" [value]="field.defaultValue"
+    (input)="onChange()" />
+
+    <demo-project-field-errors [errors]="errors" [field]="field"></demo-project-field-errors>
+    <!-- <mat-error *ngIf="errors">hata</mat-error> -->
+
+</mat-form-field>
